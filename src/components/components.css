@@ -40,23 +40,26 @@ ul {
 }
 
 .product-main-image {
-    max-width: 25vw;;
+    max-width: 33vw;
 }
 
-product-sub-images {
-    max-width: 25vw;
+.product-sub-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image {
-    border-radius: 15px;;
+    border-radius: 15px;
+    margin-top: 100px;
 }
 
 .product-image-large {
-    max-width: 17vw;
+    max-width: 25vw;
 }
 
 .product-image-small {
-    max-width: 3.1vw;
+    width: 5.3vw;
     margin: 9px;
     border: 3px solid transparent;
 }
@@ -131,8 +134,11 @@ product-sub-images {
     border-radius: 15px;
     padding: 2px 0 0 2px;
     color: white;
+    box-shadow: 25px 75px 150px var(--orange);
+
 }
 
 .cart-icon {
     filter: brightness(100);
+    margin-right: 45px;
 }
