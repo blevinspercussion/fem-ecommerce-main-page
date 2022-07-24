@@ -1,4 +1,5 @@
 import './components.css';
+import { useEffect } from 'react';
 import productImage1 from './img/image-product-1.jpg';
 import productImage2 from './img/image-product-2.jpg';
 import productImage3 from './img/image-product-3.jpg';
@@ -13,7 +14,19 @@ import productImage4Thumbnail from './img/image-product-4-thumbnail.jpg';
 
 function ProductDisplay () {
 
+    let thumbnails = [];
+
+    useEffect(() => {
+        thumbnails = Array.from(
+            document.getElementsByClassName('product-image-small')
+        );
+        console.log(thumbnails);
+    }, [])   
+
     const handleSelected = (e) => {
+        for (let thumbnail in thumbnails) {
+            thumbnails[thumbnail].classList.remove('selected-image');
+        }
         if (e.target.classList.contains('selected-image')) {
             e.target.classList.remove('selected-image');
         } else {
