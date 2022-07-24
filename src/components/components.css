@@ -29,6 +29,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 65px;
 }
 
 .product-display {
