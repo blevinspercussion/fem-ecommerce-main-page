@@ -1,0 +1,31 @@
+ul {
+    list-style: none;
+}
+
+#header {
+    width: 100vw;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0 35px 0;
+}
+
+#header li {
+    color: var(--dark-grayish-blue);
+    margin: 0 35px 0 35px;
+}
+
+.push {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-left: auto;
+}
+
+.profile-pic {
+    max-height: 45px;
+}
+
