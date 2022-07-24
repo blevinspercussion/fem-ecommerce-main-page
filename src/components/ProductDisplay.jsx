@@ -18,10 +18,18 @@ function ProductDisplay () {
                 <img className='product-image product-image-large' src={productImage1}></img>
             </div>
             <div className='product-sub-images'>
-                <img className='product-image product-image-small' src={productImage1Thumbnail}></img>
-                <img className='product-image product-image-small' src={productImage2Thumbnail}></img>
-                <img className='product-image product-image-small' src={productImage3Thumbnail}></img>
-                <img className='product-image product-image-small' src={productImage4Thumbnail}></img>
+                <div className='product-thumbnail-div selected-image-div'>
+                    <img className='product-image product-image-small selected-image' src={productImage1Thumbnail}></img>
+                </div>
+                <div>
+                    <img className='product-image product-image-small' src={productImage2Thumbnail}></img>
+                </div>
+                <div>
+                    <img className='product-image product-image-small' src={productImage3Thumbnail}></img>
+                </div>
+                <div>
+                    <img className='product-image product-image-small' src={productImage4Thumbnail}></img>
+                </div>
             </div>
 
         </div>

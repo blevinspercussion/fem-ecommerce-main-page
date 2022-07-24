@@ -1,7 +1,7 @@
 import './components.css';
 import AddRemoveCart from './AddRemoveCart';
 
-function ProductDetail () {
+function ProductDetail ({ totalInCart, setTotalInCart, addToCart, removeFromCart }) {
     return (
         <div className='product-detail'>
             <h6 className='product-head'>SNEAKER COMPANY</h6>
@@ -16,7 +16,12 @@ function ProductDetail () {
                 <h4 className='discount'>50%</h4>
             </div>
             <h3 className='old-price'>$250.00</h3>
-            <AddRemoveCart />
+            <AddRemoveCart 
+                totalInCart={totalInCart}
+                setTotalInCart={setTotalInCart}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+            />
         </div>
     )
 }
