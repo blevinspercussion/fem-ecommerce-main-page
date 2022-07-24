@@ -26,7 +26,7 @@ ul {
 
 #main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 65px;
@@ -58,4 +58,37 @@ product-sub-images {
 .product-image-small {
     max-width: 5.2vw;
     margin: 15px;
+}
+
+.product-detail {
+    max-width: 20vw;
+    margin-left: 100px;
+}
+
+.product-head {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.product-title {
+    font-weight: 1000;
+}
+
+.current-price {
+    display: flex;
+    align-items: center;
+}
+
+.discount {
+    margin-left: 18px;
+    color: var(--orange);
+    background-color: var(--pale-orange);
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+}
+
+.old-price {
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+    margin-top: -10px;
 }
