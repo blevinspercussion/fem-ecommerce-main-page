@@ -16,6 +16,7 @@ function ProductDetail () {
                 <h4 className='discount'>50%</h4>
             </div>
             <h3 className='old-price'>$250.00</h3>
+            <AddRemoveCart />
         </div>
     )
 }
