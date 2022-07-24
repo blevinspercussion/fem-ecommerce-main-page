@@ -5,7 +5,8 @@ import ProductDisplay from './ProductDisplay';
 function MainContentArea ({ totalInCart, setTotalInCart, addToCart, removeFromCart }) {
     return (
         <div id='main-content'>
-            <ProductDisplay />
+            <ProductDisplay 
+            />
             <ProductDetail 
                 totalInCart={totalInCart}
                 setTotalInCart={setTotalInCart}

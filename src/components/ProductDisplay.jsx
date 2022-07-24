@@ -12,23 +12,32 @@ import productImage4Thumbnail from './img/image-product-4-thumbnail.jpg';
 
 
 function ProductDisplay () {
+
+    const handleSelected = (e) => {
+        if (e.target.classList.contains('selected-image')) {
+            e.target.classList.remove('selected-image');
+        } else {
+            e.target.classList.add('selected-image');
+        };
+    };
+
     return (
         <div className='product-display'>
             <div className='product-main-image'>
                 <img className='product-image product-image-large' src={productImage1}></img>
             </div>
             <div className='product-sub-images'>
-                <div className='product-thumbnail-div selected-image-div'>
-                    <img className='product-image product-image-small selected-image' src={productImage1Thumbnail}></img>
+                <div>
+                    <img className={'product-image product-image-small'} src={productImage1Thumbnail} onClick={handleSelected}></img>
                 </div>
                 <div>
-                    <img className='product-image product-image-small' src={productImage2Thumbnail}></img>
+                    <img className={'product-image product-image-small'} src={productImage2Thumbnail} onClick={handleSelected}></img>
                 </div>
                 <div>
-                    <img className='product-image product-image-small' src={productImage3Thumbnail}></img>
+                    <img className={'product-image product-image-small'} src={productImage3Thumbnail} onClick={handleSelected}></img>
                 </div>
                 <div>
-                    <img className='product-image product-image-small' src={productImage4Thumbnail}></img>
+                    <img className={'product-image product-image-small'} src={productImage4Thumbnail} onClick={handleSelected}></img>
                 </div>
             </div>
 

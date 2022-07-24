@@ -57,7 +57,8 @@ product-sub-images {
 
 .product-image-small {
     max-width: 3.1vw;
-    margin: 15px;
+    margin: 9px;
+    border: 3px solid transparent;
 }
 
 .selected-image {

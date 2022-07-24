@@ -28,6 +28,7 @@ function App() {
         setTotalInCart={setTotalInCart}
         addToCart={addToCart}
         removeFromCart={removeFromCart}
+
       />
     </div>
   );
