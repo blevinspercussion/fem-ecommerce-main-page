@@ -2,15 +2,10 @@ ul {
     list-style: none;
 }
 
-#header {
-    width: 100vw;
-}
-
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 35px 0 35px 0;
 }
 
 #header li {
@@ -29,3 +24,37 @@ ul {
     max-height: 45px;
 }
 
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-main-image {
+    max-width: 25vw;;
+}
+
+product-sub-images {
+    max-width: 25vw;
+}
+
+.product-image {
+    border-radius: 15px;;
+}
+
+.product-image-large {
+    max-width: 25vw;
+}
+
+.product-image-small {
+    max-width: 5.2vw;
+    margin: 15px;
+}
