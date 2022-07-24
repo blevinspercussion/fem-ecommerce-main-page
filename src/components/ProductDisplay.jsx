@@ -1,5 +1,5 @@
 import './components.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import productImage1 from './img/image-product-1.jpg';
 import productImage2 from './img/image-product-2.jpg';
 import productImage3 from './img/image-product-3.jpg';
@@ -16,13 +16,14 @@ function ProductDisplay () {
 
     let thumbnails = [];
 
+    const [currentPic, setCurrentPic] = useState(productImage1);
+
     useEffect(() => {
         thumbnails = Array.from(
             document.getElementsByClassName('product-image-small')
         );
-        console.log(thumbnails);
-    }, [])   
-
+    })
+    
     const handleSelected = (e) => {
         for (let thumbnail in thumbnails) {
             thumbnails[thumbnail].classList.remove('selected-image');
@@ -32,18 +33,38 @@ function ProductDisplay () {
         } else {
             e.target.classList.add('selected-image');
         };
+        switch (e.target.id) {
+            case 'productImage1':
+                setCurrentPic(productImage1);
+                break;
+
+            case 'productImage2':
+                setCurrentPic(productImage2);
+                break;
+
+            case 'productImage3':
+                setCurrentPic(productImage3);
+                break;
+
+            case 'productImage4':
+                setCurrentPic(productImage4);
+                break;
+
+            default:
+                setCurrentPic(productImage1);
+        }
     };
 
     return (
         <div className='product-display'>
             <div className='product-main-image'>
-                <img className='product-image product-image-large' src={productImage1}></img>
+                <img className='product-image product-image-large' src={currentPic}></img>
             </div>
             <div className='product-sub-images'>
-                <img className={'product-image product-image-small'} src={productImage1Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} src={productImage2Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} src={productImage3Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} src={productImage4Thumbnail} onClick={handleSelected}></img>
+                <img className={'product-image product-image-small'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
+                <img className={'product-image product-image-small'} id='productImage2' src={productImage2Thumbnail} onClick={handleSelected}></img>
+                <img className={'product-image product-image-small'} id='productImage3' src={productImage3Thumbnail} onClick={handleSelected}></img>
+                <img className={'product-image product-image-small'} id='productImage4' src={productImage4Thumbnail} onClick={handleSelected}></img>
             </div>
 
         </div>
