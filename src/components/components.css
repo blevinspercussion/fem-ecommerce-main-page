@@ -134,11 +134,27 @@ ul {
     border-radius: 15px;
     padding: 2px 0 0 2px;
     color: white;
-    box-shadow: 25px 75px 150px var(--orange);
+    box-shadow: 10px 30px 35px var(--pale-orange);
 
 }
 
 .cart-icon {
     filter: brightness(100);
     margin-right: 45px;
+}
+
+.hover-cart {
+    position: absolute;
+    color: var(--dark-grayish-blue);
+    background-color: white;
+    top: 75px;
+    right: 500px;
+    width: 20vw;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px var(--dark-grayish-blue);
+}
+
+.hover-cart hr {
+    width: auto;
 }

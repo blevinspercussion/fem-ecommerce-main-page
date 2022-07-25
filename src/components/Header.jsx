@@ -1,9 +1,22 @@
 import './components.css';
+import { useState } from 'react';
+import HoverCart from './HoverCart';
 import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
 
-function Header () {
+function Header ({ totalInCart }) {
+
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleCartMouseOver = () => {
+        setIsHovering(true);
+    };
+
+    const handleCartMouseExit = () => {
+        setIsHovering(false);
+    };
+
     return (
         <div id='header'>
             <ul className='main-nav'>
@@ -13,7 +26,16 @@ function Header () {
                 <li><a href='#'>Women</a></li>
                 <li><a href='#'>About</a></li>
                 <li><a href='#'>Contact</a></li>
-                <li className='push'><img src={shoppingCart}></img></li>
+                <li className='push' onMouseOver={handleCartMouseOver} onMouseOut={handleCartMouseExit}>
+                    <div className='cart-div'>
+                        <img src={shoppingCart}></img>
+                    </div>
+                </li>
+                {isHovering && (
+                <div className='hover-cart-div'>
+                    <HoverCart totalInCart={totalInCart}/>
+                </div>
+                )}
                 <li><img className='profile-pic' src={profilePic}></img></li>
             </ul>
         </div>

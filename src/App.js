@@ -21,7 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header 
+        totalInCart={totalInCart}
+      />
       <hr />
       <MainContentArea 
         totalInCart={totalInCart}
