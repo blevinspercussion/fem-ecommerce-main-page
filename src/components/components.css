@@ -293,18 +293,18 @@ ul {
 }
 
 .left-arrow {
-    right: 31.5rem;
+    right: 25vw;
     background-color: var(--light-grayish-blue);
 }
 
 .right-arrow {
-    left: 31.5rem;
+    left: 25vw;
     background-color: var(--light-grayish-blue);
 }
 
 .lightbox-close {
     position: absolute;
-    top: 8vh;
+    top: 5vh;
     left: 24vw;
     height: 20px;
 }
