@@ -21,11 +21,26 @@ ul {
     text-decoration-color: var(--orange);
 }
 
+.floating-total {
+    position: absolute;
+    background-color: var(--orange);
+    color: white;
+    top: -15px;
+    left: 10px;
+    border-radius: 30px;
+    padding: 0 10px 0 10px;
+    font-size: 11px;
+}
+
 .push {
     /* display: flex;
     align-items: center;
     justify-content: center; */
     margin-left: auto;
+}
+
+.cart-div {
+    position: relative;
 }
 
 .shopping-cart-icon:hover {

@@ -29,7 +29,12 @@ function Header ({ totalInCart, resetCart }) {
                 <li className='push' onMouseOver={handleCartMouseOver}>
                     <div className='cart-div'>
                         <img className='shopping-cart-icon' src={shoppingCart}></img>
-                    </div>
+                    {(() => {
+                        if (totalInCart > 0) {
+                            return <p className='floating-total'>{totalInCart}</p>
+                        }
+                    })()}
+                </div>
                 </li>
                 {isHovering && (
                 <div className='hover-cart-div'>
