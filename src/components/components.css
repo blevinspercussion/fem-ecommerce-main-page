@@ -13,6 +13,14 @@ ul {
     margin: 0 35px 0 35px;
 }
 
+#header a:hover {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 2.5rem;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--orange);
+}
+
 .push {
     /* display: flex;
     align-items: center;
@@ -20,8 +28,21 @@ ul {
     margin-left: auto;
 }
 
+.shopping-cart-icon:hover {
+    cursor: pointer;
+    filter: brightness(0%);
+}
+
 .profile-pic {
     max-height: 45px;
+    border: 2px solid transparent;
+    border-radius: 100%;
+}
+
+.profile-pic:hover {
+    cursor: pointer;
+    border: 2px solid var(--orange);
+    border-radius: 100%;
 }
 
 #main-content {
@@ -125,6 +146,11 @@ ul {
     border-radius: 15px;
 }
 
+.plus-minus-div:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .add-to-cart {
     display: flex;
     align-items: center;
@@ -135,7 +161,11 @@ ul {
     padding: 2px 0 0 2px;
     color: white;
     box-shadow: 10px 30px 35px var(--pale-orange);
+}
 
+.add-to-cart:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .cart-icon {
@@ -193,6 +223,10 @@ ul {
     margin-left: 15px;
 }
 
+.trash-icon:hover {
+    cursor: pointer;
+}
+
 .checkout-button {
     background-color: var(--orange);
     display: flex;
@@ -202,4 +236,8 @@ ul {
     border-radius: 10px;
     color: white;
     font-weight: 700;
+}
+
+.checkout-button:hover {
+    cursor: pointer;
 }

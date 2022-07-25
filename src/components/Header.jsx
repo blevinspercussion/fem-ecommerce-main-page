@@ -28,7 +28,7 @@ function Header ({ totalInCart }) {
                 <li><a href='#'>Contact</a></li>
                 <li className='push' onMouseOver={handleCartMouseOver}>
                     <div className='cart-div'>
-                        <img src={shoppingCart}></img>
+                        <img className='shopping-cart-icon' src={shoppingCart}></img>
                     </div>
                 </li>
                 {isHovering && (
