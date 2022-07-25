@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import MainContentArea from './components/MainContentArea';
+import LightBox from './components/LightBox';
 
 import { useState } from 'react';
 
@@ -31,12 +32,14 @@ function App() {
 
   return (
     <div className="App">
+      <LightBox />
+      <div className='dark-overlay'></div>
       <Header 
         totalInCart={totalInCart}
         resetCart={resetCart}
       />
       <hr />
-      <MainContentArea 
+      <MainContentArea
         totalInCart={totalInCart}
         setTotalInCart={setTotalInCart}
         addToCart={addToCart}

@@ -61,10 +61,18 @@ function ProductDisplay () {
                 <img className='product-image product-image-large' src={currentPic}></img>
             </div>
             <div className='product-sub-images'>
-                <img className={'product-image product-image-small'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} id='productImage2' src={productImage2Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} id='productImage3' src={productImage3Thumbnail} onClick={handleSelected}></img>
-                <img className={'product-image product-image-small'} id='productImage4' src={productImage4Thumbnail} onClick={handleSelected}></img>
+                <div className='product-image-small-div'>
+                    <img className={'product-image product-image-small'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
+                </div>
+                <div className='product-image-small-div'>
+                    <img className={'product-image product-image-small'} id='productImage2' src={productImage2Thumbnail} onClick={handleSelected}></img>
+                </div>
+                <div className='product-image-small-div'>
+                    <img className={'product-image product-image-small'} id='productImage3' src={productImage3Thumbnail} onClick={handleSelected}></img>
+                </div>
+                <div className='product-image-small-div'>
+                    <img className={'product-image product-image-small'} id='productImage4' src={productImage4Thumbnail} onClick={handleSelected}></img>
+                </div>
             </div>
 
         </div>
