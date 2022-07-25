@@ -158,3 +158,24 @@ ul {
 .hover-cart hr {
     width: auto;
 }
+
+.hover-cart-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-cart-total {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.cart-description p {
+    margin: 5px;
+}
+
+.cart-thumbnail {
+    max-height: 5vh;
+    margin-right: 10px;
+    border-radius: 4px;
+}

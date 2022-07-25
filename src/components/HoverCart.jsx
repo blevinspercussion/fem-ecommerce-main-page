@@ -19,8 +19,8 @@ function HoverCart ({ totalInCart }) {
             <div className='hover-cart'>
                 <h5>Cart</h5>
                 <hr />
-                <div className='cart-hover-body'>
-                    <div className='cart-hover-total'>
+                <div className='hover-cart-body'>
+                    <div className='hover-cart-total'>
                         <img className='cart-thumbnail' src={productImage1}></img>
                         <div className='cart-description'>
                             <p>Fall Limited Edition Sneakers</p>
