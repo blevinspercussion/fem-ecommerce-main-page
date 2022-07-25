@@ -1,7 +1,7 @@
 import './components.css';
 import AddRemoveCart from './AddRemoveCart';
 
-function ProductDetail ({ totalInCart, setTotalInCart, addToCart, removeFromCart }) {
+function ProductDetail ({ totalInCart, setTotalInCart, addToCart, removeFromCart, potentialInCart, addPotentialToCart }) {
     return (
         <div className='product-detail'>
             <h6 className='product-head'>SNEAKER COMPANY</h6>
@@ -21,6 +21,8 @@ function ProductDetail ({ totalInCart, setTotalInCart, addToCart, removeFromCart
                 setTotalInCart={setTotalInCart}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                potentialInCart={potentialInCart}
+                addPotentialToCart={addPotentialToCart}
             />
         </div>
     )

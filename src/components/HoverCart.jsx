@@ -3,7 +3,11 @@ import productImage1 from './img/image-product-1-thumbnail.jpg';
 import trashIcon from './img/icon-delete.svg';
 
 
-function HoverCart ({ totalInCart, handleCartMouseExit }) {
+function HoverCart ({ totalInCart, handleCartMouseExit, resetCart }) {
+
+    const handleTrashClick = () => {
+        resetCart();
+    }
 
     if (totalInCart === 0) {
         return (
@@ -27,7 +31,7 @@ function HoverCart ({ totalInCart, handleCartMouseExit }) {
                             <p>Fall Limited Edition Sneakers</p>
                             <p className='cart-total'>$125.00 x {totalInCart} <strong>${125*totalInCart}.00</strong></p>
                         </div>
-                        <img className='trash-icon' src={trashIcon}></img>
+                        <img className='trash-icon' src={trashIcon} onClick={handleTrashClick}></img>
                     </div>
                 </div>
                 <div className='checkout-button'>

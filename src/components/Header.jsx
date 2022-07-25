@@ -5,7 +5,7 @@ import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
 
-function Header ({ totalInCart }) {
+function Header ({ totalInCart, resetCart }) {
 
     const [isHovering, setIsHovering] = useState(false);
 
@@ -33,7 +33,7 @@ function Header ({ totalInCart }) {
                 </li>
                 {isHovering && (
                 <div className='hover-cart-div'>
-                    <HoverCart totalInCart={totalInCart} handleCartMouseExit={handleCartMouseExit} />
+                    <HoverCart totalInCart={totalInCart} handleCartMouseExit={handleCartMouseExit} resetCart={resetCart} />
                 </div>
                 )}
                 <li><img className='profile-pic' src={profilePic}></img></li>
