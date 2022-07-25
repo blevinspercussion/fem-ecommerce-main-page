@@ -1,5 +1,6 @@
 import './components.css';
 import productImage1 from './img/image-product-1-thumbnail.jpg';
+import trashIcon from './img/icon-delete.svg';
 
 
 function HoverCart ({ totalInCart }) {
@@ -24,9 +25,13 @@ function HoverCart ({ totalInCart }) {
                         <img className='cart-thumbnail' src={productImage1}></img>
                         <div className='cart-description'>
                             <p>Fall Limited Edition Sneakers</p>
-                            <p>$125.00 x {totalInCart} <strong>${125*totalInCart}.00</strong></p>
+                            <p className='cart-total'>$125.00 x {totalInCart} <strong>${125*totalInCart}.00</strong></p>
                         </div>
+                        <img className='trash-icon' src={trashIcon}></img>
                     </div>
+                </div>
+                <div className='checkout-button'>
+                    <p>Checkout</p>
                 </div>
             </div>
         )

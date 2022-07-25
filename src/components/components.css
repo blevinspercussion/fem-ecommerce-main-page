@@ -149,10 +149,15 @@ ul {
     background-color: white;
     top: 75px;
     right: 500px;
-    width: 20vw;
+    width: 15vw;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 5px 5px 15px var(--dark-grayish-blue);
+    font-weight: 500;
+}
+
+.hover-cart h5 {
+    color: black;
 }
 
 .hover-cart hr {
@@ -170,6 +175,10 @@ ul {
     font-size: 15px;
 }
 
+.cart-total {
+    color: black;
+}
+
 .cart-description p {
     margin: 5px;
 }
@@ -178,4 +187,19 @@ ul {
     max-height: 5vh;
     margin-right: 10px;
     border-radius: 4px;
+}
+
+.trash-icon {
+    margin-left: 15px;
+}
+
+.checkout-button {
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
 }
