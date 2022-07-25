@@ -280,3 +280,41 @@ ul {
     justify-content: center;
     z-index: 3;
 }
+
+.arrow-div {
+    background-color: var(--light-grayish-blue);
+}
+
+.arrow {
+    /* background-color: var(--light-grayish-blue); */
+    border-radius: 100%;
+    padding: 12px 15px 12px 15px;
+    position: absolute;
+}
+
+.arrow:hover::before {
+    background-color: var(--light-grayish-blue);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    filter: invert(67%) sepia(67%) saturate(4145%) hue-rotate(346deg) brightness(100%) contrast(102%);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.left-arrow {
+    right: 31.5rem;
+    background-color: var(--light-grayish-blue);
+}
+
+.right-arrow {
+    left: 31.5rem;
+    background-color: var(--light-grayish-blue);
+}
+
