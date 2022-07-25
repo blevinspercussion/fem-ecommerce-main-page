@@ -12,53 +12,53 @@ import productImage4Thumbnail from './img/image-product-4-thumbnail.jpg';
 
 
 
-function ProductDisplay () {
+function ProductDisplay ({ toggleDarkOverlay, currentPic, handleCurrentPic, thumbnails, handleSelected }) {
 
-    let thumbnails = [];
+    // let thumbnails = [];
 
-    const [currentPic, setCurrentPic] = useState(productImage1);
+    // const [currentPic, setCurrentPic] = useState(productImage1);
 
-    useEffect(() => {
-        thumbnails = Array.from(
-            document.getElementsByClassName('product-image-small')
-        );
-    })
+    // useEffect(() => {
+    //     thumbnails = Array.from(
+    //         document.getElementsByClassName('product-image-small')
+    //     );
+    // })
     
-    const handleSelected = (e) => {
-        for (let thumbnail in thumbnails) {
-            thumbnails[thumbnail].classList.remove('selected-image');
-        }
-        if (e.target.classList.contains('selected-image')) {
-            e.target.classList.remove('selected-image');
-        } else {
-            e.target.classList.add('selected-image');
-        };
-        switch (e.target.id) {
-            case 'productImage1':
-                setCurrentPic(productImage1);
-                break;
+    // const handleSelected = (e) => {
+    //     for (let thumbnail in thumbnails) {
+    //         thumbnails[thumbnail].classList.remove('selected-image');
+    //     }
+    //     if (e.target.classList.contains('selected-image')) {
+    //         e.target.classList.remove('selected-image');
+    //     } else {
+    //         e.target.classList.add('selected-image');
+    //     };
+    //     switch (e.target.id) {
+    //         case 'productImage1':
+    //             setCurrentPic(productImage1);
+    //             break;
 
-            case 'productImage2':
-                setCurrentPic(productImage2);
-                break;
+    //         case 'productImage2':
+    //             setCurrentPic(productImage2);
+    //             break;
 
-            case 'productImage3':
-                setCurrentPic(productImage3);
-                break;
+    //         case 'productImage3':
+    //             setCurrentPic(productImage3);
+    //             break;
 
-            case 'productImage4':
-                setCurrentPic(productImage4);
-                break;
+    //         case 'productImage4':
+    //             setCurrentPic(productImage4);
+    //             break;
 
-            default:
-                setCurrentPic(productImage1);
-        }
-    };
+    //         default:
+    //             setCurrentPic(productImage1);
+    //     }
+    // };
 
     return (
         <div className='product-display'>
             <div className='product-main-image'>
-                <img className='product-image product-image-large' src={currentPic}></img>
+                <img className='product-image product-image-large' src={currentPic} onClick={toggleDarkOverlay}></img>
             </div>
             <div className='product-sub-images'>
                 <div className='product-image-small-div'>

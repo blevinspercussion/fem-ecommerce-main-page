@@ -20,7 +20,7 @@ function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
     return (
         <div id='header'>
             <ul className='main-nav'>
-                <li><img src={logo} onClick={toggleDarkOverlay}></img></li>
+                <li><img src={logo}></img></li>
                 <li><a href='#'>Collections</a></li>
                 <li><a href='#'>Men</a></li>
                 <li><a href='#'>Women</a></li>
