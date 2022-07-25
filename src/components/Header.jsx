@@ -5,7 +5,7 @@ import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
 
-function Header ({ totalInCart, resetCart }) {
+function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
 
     const [isHovering, setIsHovering] = useState(false);
 
@@ -20,7 +20,7 @@ function Header ({ totalInCart, resetCart }) {
     return (
         <div id='header'>
             <ul className='main-nav'>
-                <li><img src={logo}></img></li>
+                <li><img src={logo} onClick={toggleDarkOverlay}></img></li>
                 <li><a href='#'>Collections</a></li>
                 <li><a href='#'>Men</a></li>
                 <li><a href='#'>Women</a></li>

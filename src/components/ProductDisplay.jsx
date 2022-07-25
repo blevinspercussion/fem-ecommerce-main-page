@@ -62,7 +62,7 @@ function ProductDisplay () {
             </div>
             <div className='product-sub-images'>
                 <div className='product-image-small-div'>
-                    <img className={'product-image product-image-small'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
+                    <img className={'product-image product-image-small selected-image'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
                 </div>
                 <div className='product-image-small-div'>
                     <img className={'product-image product-image-small'} id='productImage2' src={productImage2Thumbnail} onClick={handleSelected}></img>
