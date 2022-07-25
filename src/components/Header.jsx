@@ -26,9 +26,9 @@ function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
                 <li><a href='#'>Women</a></li>
                 <li><a href='#'>About</a></li>
                 <li><a href='#'>Contact</a></li>
-                <li className='push' onMouseOver={handleCartMouseOver}>
+                <li className='push'>
                     <div className='cart-div'>
-                        <img className='shopping-cart-icon' src={shoppingCart}></img>
+                        <img className='shopping-cart-icon' src={shoppingCart} onMouseOver={handleCartMouseOver}></img>
                     {(() => {
                         if (totalInCart > 0) {
                             return <p className='floating-total'>{totalInCart}</p>

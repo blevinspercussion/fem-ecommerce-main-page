@@ -17,13 +17,14 @@ ul {
 
 .main-nav {
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
 }
 
 #header li {
     color: var(--dark-grayish-blue);
     margin: 0 35px 0 35px;
+    float: left;
 }
 
 #header a:hover {
@@ -49,11 +50,12 @@ ul {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    margin-left: auto;
+    margin-left: 1000px;
 }
 
 .cart-div {
     position: relative;
+    margin-left: 250px;
 }
 
 .shopping-cart-icon:hover {
@@ -212,7 +214,7 @@ ul {
     color: var(--dark-grayish-blue);
     background-color: white;
     top: 75px;
-    right: 500px;
+    right: 300px;
     width: 15vw;
     padding: 10px;
     border-radius: 15px;
