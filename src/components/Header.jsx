@@ -26,14 +26,14 @@ function Header ({ totalInCart }) {
                 <li><a href='#'>Women</a></li>
                 <li><a href='#'>About</a></li>
                 <li><a href='#'>Contact</a></li>
-                <li className='push' onMouseOver={handleCartMouseOver} onMouseOut={handleCartMouseExit}>
+                <li className='push' onMouseOver={handleCartMouseOver}>
                     <div className='cart-div'>
                         <img src={shoppingCart}></img>
                     </div>
                 </li>
                 {isHovering && (
                 <div className='hover-cart-div'>
-                    <HoverCart totalInCart={totalInCart}/>
+                    <HoverCart totalInCart={totalInCart} handleCartMouseExit={handleCartMouseExit} />
                 </div>
                 )}
                 <li><img className='profile-pic' src={profilePic}></img></li>

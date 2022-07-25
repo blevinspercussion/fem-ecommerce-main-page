@@ -3,11 +3,11 @@ import productImage1 from './img/image-product-1-thumbnail.jpg';
 import trashIcon from './img/icon-delete.svg';
 
 
-function HoverCart ({ totalInCart }) {
+function HoverCart ({ totalInCart, handleCartMouseExit }) {
 
     if (totalInCart === 0) {
         return (
-            <div className='hover-cart'>
+            <div className='hover-cart' onMouseLeave={handleCartMouseExit}>
             <h5>Cart</h5>
             <hr />
             <p>Your cart is empty</p>
@@ -17,7 +17,7 @@ function HoverCart ({ totalInCart }) {
 
 
         return (
-            <div className='hover-cart'>
+            <div className='hover-cart' onMouseLeave={handleCartMouseExit}>
                 <h5>Cart</h5>
                 <hr />
                 <div className='hover-cart-body'>
