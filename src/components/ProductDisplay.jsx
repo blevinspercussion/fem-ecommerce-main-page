@@ -21,16 +21,16 @@ function ProductDisplay ({ toggleDarkOverlay, currentPic, handleCurrentPic, thum
                 <img className='product-image product-image-large' src={currentPic} onClick={toggleDarkOverlay}></img>
             </div>
             <div className='product-sub-images'>
-                <div className='product-image-small-div'>
+                <div className='product-image-small-bg'>
                     <img className={'product-image product-image-small selected-image product-image1'} id='productImage1' src={productImage1Thumbnail} onClick={handleSelected}></img>
                 </div>
-                <div className='product-image-small-div'>
+                <div className='product-image-small-bg'>
                     <img className={'product-image product-image-small product-image2'} id='productImage2' src={productImage2Thumbnail} onClick={handleSelected}></img>
                 </div>
-                <div className='product-image-small-div'>
+                <div className='product-image-small-bg'>
                     <img className={'product-image product-image-small product-image3'} id='productImage3' src={productImage3Thumbnail} onClick={handleSelected}></img>
                 </div>
-                <div className='product-image-small-div'>
+                <div className='product-image-small-bg'>
                     <img className={'product-image product-image-small product-image4'} id='productImage4' src={productImage4Thumbnail} onClick={handleSelected}></img>
                 </div>
             </div>
