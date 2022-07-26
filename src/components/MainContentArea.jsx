@@ -2,11 +2,11 @@ import './components.css';
 import ProductDetail from './ProductDetail';
 import ProductDisplay from './ProductDisplay';
 
-function MainContentArea ({ totalInCart, setTotalInCart, addToCart, removeFromCart, potentialInCart, addPotentialToCart, toggleDarkOverlay, currentPic, setCurrentPic, thumbnails, handleSelected }) {
+function MainContentArea ({ totalInCart, setTotalInCart, addToCart, removeFromCart, potentialInCart, addPotentialToCart, toggleLightBox, currentPic, setCurrentPic, thumbnails, handleSelected }) {
     return (
         <div id='main-content'>
             <ProductDisplay
-                toggleDarkOverlay={toggleDarkOverlay}
+                toggleLightBox={toggleLightBox}
                 currentPic={currentPic}
                 setCurrentPic={setCurrentPic}
                 thumbnails={thumbnails}

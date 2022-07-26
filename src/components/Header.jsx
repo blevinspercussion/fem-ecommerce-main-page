@@ -10,6 +10,7 @@ import hamburger from './img/icon-menu.svg'
 function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
 
     const [isHovering, setIsHovering] = useState(false);
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
     const handleCartMouseOver = () => {
         setIsHovering(true);
@@ -19,11 +20,17 @@ function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
         setIsHovering(false);
     };
 
+    const handleHamburgerClick = () => {
+        toggleDarkOverlay();
+        showHamburgerMenu ? setShowHamburgerMenu(false) : setShowHamburgerMenu(true);
+        console.log(showHamburgerMenu);
+    }
+
     return (
         <div id='header'>
 
             <ul className='main-nav'>
-                <li id='hamburger-icon'><img src={hamburger} /></li>
+                <li id='hamburger-icon'><img src={hamburger} onClick={handleHamburgerClick} /></li>
                 <li id='logo'><img src={logo}></img></li>
                 <li className='desktop-nav-item'><a href='#'>Collections</a></li>
                 <li className='desktop-nav-item'><a href='#'>Men</a></li>

@@ -15,7 +15,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-#hamburger {
+#hamburger-icon {
     display: none
 }
 
@@ -359,6 +359,7 @@ ul {
     }
 
     #hamburger-icon {
+        display: block;
         left: 110px;
         top: 27px;
         position: absolute;

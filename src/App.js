@@ -21,7 +21,6 @@ function App() {
   const [lightBoxActive, setLightBoxActive] = useState(false);
   const [currentPic, setCurrentPic] = useState(productImage1);
 
-
   let thumbnails = [];
 
   const darkOverlayDiv = useRef(null);
@@ -66,10 +65,12 @@ function App() {
 
   const toggleDarkOverlay = () => {
     darkOverlayDiv.current.classList.contains('dark-overlay') ? darkOverlayDiv.current.classList.remove('dark-overlay') : darkOverlayDiv.current.classList.add('dark-overlay');
-    lightBoxActive ? setLightBoxActive(false) : setLightBoxActive(true);
   }
 
-
+  const toggleLightBox = () => {
+    toggleDarkOverlay();
+    lightBoxActive ? setLightBoxActive(false) : setLightBoxActive(true);
+  }
 
   const addToCart = () => {
     setPotentialInCart(potentialInCart + 1);
@@ -95,7 +96,7 @@ function App() {
 
     {(() => {
       if (lightBoxActive) {
-        return <LightBox toggleDarkOverlay={toggleDarkOverlay} 
+        return <LightBox toggleLightBox={toggleLightBox} 
         currentPic={currentPic}
         setCurrentPic={setCurrentPic}
         thumbnails={thumbnails}
@@ -109,6 +110,7 @@ function App() {
         totalInCart={totalInCart}
         resetCart={resetCart}
         toggleDarkOverlay={toggleDarkOverlay}
+        toggleLightBox={toggleLightBox}
 
       />
       <hr />
@@ -119,7 +121,7 @@ function App() {
         removeFromCart={removeFromCart}
         potentialInCart={potentialInCart}
         addPotentialToCart={addPotentialToCart}
-        toggleDarkOverlay={toggleDarkOverlay}
+        toggleLightBox={toggleLightBox}
         currentPic={currentPic}
         setCurrentPic={setCurrentPic}
         thumbnails={thumbnails}

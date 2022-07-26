@@ -12,13 +12,13 @@ import productImage4Thumbnail from './img/image-product-4-thumbnail.jpg';
 
 
 
-function ProductDisplay ({ toggleDarkOverlay, currentPic, handleCurrentPic, thumbnails, handleSelected }) {
+function ProductDisplay ({ toggleLightBox, currentPic, handleCurrentPic, thumbnails, handleSelected }) {
 
 
     return (
         <div className='product-display'>
             <div className='product-main-image'>
-                <img className='product-image product-image-large' src={currentPic} onClick={toggleDarkOverlay}></img>
+                <img className='product-image product-image-large' src={currentPic} onClick={toggleLightBox}></img>
             </div>
             <div className='product-sub-images'>
                 <div className='product-image-small-bg'>
