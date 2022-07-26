@@ -16,7 +16,11 @@ ul {
 }
 
 #hamburger-icon {
-    display: none
+    display: none;
+}
+
+#hamburger-menu {
+    display: none;
 }
 
 .main-nav {
@@ -372,5 +376,34 @@ ul {
     #logo {
         position: absolute;
         left: 140px;
+    }
+
+    #hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 70vw;
+        background-color: white;
+        height: 100vh;
+        z-index: 3;
+        margin-left: -15px;
+    }
+
+    #hamburger-menu-close {
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+
+    #hamburger-menu a {
+        color: black;
+        font-weight: 700;
+        font-size: 17px;
+    }
+
+    #hamburger-menu li {
+        margin-bottom: 30px;
     }
 }

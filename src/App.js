@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import MainContentArea from './components/MainContentArea';
 import LightBox from './components/LightBox';
+import HamburgerMenu from './components/HamburgerMenu';
 
 import productImage1 from './components/img/image-product-1.jpg';
 import productImage2 from './components/img/image-product-2.jpg';
@@ -20,6 +21,8 @@ function App() {
   const [potentialInCart, setPotentialInCart] = useState(0);
   const [lightBoxActive, setLightBoxActive] = useState(false);
   const [currentPic, setCurrentPic] = useState(productImage1);
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
 
   let thumbnails = [];
 
@@ -91,6 +94,13 @@ function App() {
     setTotalInCart(0);
   }
 
+  const toggleHamburgerMenu = () => {
+    toggleDarkOverlay();
+    showHamburgerMenu ? setShowHamburgerMenu(false) : setShowHamburgerMenu(true);
+    console.log(showHamburgerMenu);
+  
+}
+
   return (
     <div className="App">
 
@@ -103,7 +113,14 @@ function App() {
         handleSelected={handleSelected}
         />
       }
-    })()}      
+    })()}
+
+    {(() => {
+      if (showHamburgerMenu) {
+        return <HamburgerMenu toggleHamburgerMenu={toggleHamburgerMenu} />
+      }
+    })()}
+
 
       <div ref={darkOverlayDiv}></div>
       <Header 
@@ -111,7 +128,7 @@ function App() {
         resetCart={resetCart}
         toggleDarkOverlay={toggleDarkOverlay}
         toggleLightBox={toggleLightBox}
-
+        toggleHamburgerMenu={toggleHamburgerMenu}
       />
       <hr />
       <MainContentArea

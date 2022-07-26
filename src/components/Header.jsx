@@ -1,16 +1,16 @@
 import './components.css';
 import { useState } from 'react';
 import HoverCart from './HoverCart';
+import HamburgerMenu from './HamburgerMenu';
 import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
 
 import hamburger from './img/icon-menu.svg'
 
-function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
+function Header ({ totalInCart, resetCart, toggleHamburgerMenu }) {
 
     const [isHovering, setIsHovering] = useState(false);
-    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
     const handleCartMouseOver = () => {
         setIsHovering(true);
@@ -21,14 +21,11 @@ function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
     };
 
     const handleHamburgerClick = () => {
-        toggleDarkOverlay();
-        showHamburgerMenu ? setShowHamburgerMenu(false) : setShowHamburgerMenu(true);
-        console.log(showHamburgerMenu);
-    }
+        toggleHamburgerMenu();
+    };
 
     return (
         <div id='header'>
-
             <ul className='main-nav'>
                 <li id='hamburger-icon'><img src={hamburger} onClick={handleHamburgerClick} /></li>
                 <li id='logo'><img src={logo}></img></li>
