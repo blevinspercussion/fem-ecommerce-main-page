@@ -406,4 +406,54 @@ ul {
     #hamburger-menu li {
         margin-bottom: 30px;
     }
+
+    #main-content {
+        flex-direction: column;
+    }
+
+    .product-image-small {
+        display: none;
+    }
+
+    .product-image {
+        margin-top: -60px;
+    }
+
+    .product-main-image {
+        max-width: 100vw;
+    }
+
+    .product-image-large {
+        max-width: 100vw;
+    }
+
+    .product-detail {
+        max-width: 90vw;
+        margin-left: 0;
+        margin-top: -100px;
+    }
+    .prices {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .old-price {
+        margin: -5px 0 0 0;
+        margin-left: auto;
+    }
+
+    .add-remove-cart {
+        flex-direction: column;
+    }
+
+    .add-remove-amount {
+        width: 85vw;
+        margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+        width: 85vw;
+        margin-bottom: 25px;
+    }
 }
