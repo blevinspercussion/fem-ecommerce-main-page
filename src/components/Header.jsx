@@ -5,6 +5,8 @@ import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
 
+import hamburger from './img/icon-menu.svg'
+
 function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
 
     const [isHovering, setIsHovering] = useState(false);
@@ -19,13 +21,15 @@ function Header ({ totalInCart, resetCart, toggleDarkOverlay }) {
 
     return (
         <div id='header'>
+
             <ul className='main-nav'>
-                <li><img src={logo}></img></li>
-                <li><a href='#'>Collections</a></li>
-                <li><a href='#'>Men</a></li>
-                <li><a href='#'>Women</a></li>
-                <li><a href='#'>About</a></li>
-                <li><a href='#'>Contact</a></li>
+                <li id='hamburger-icon'><img src={hamburger} /></li>
+                <li id='logo'><img src={logo}></img></li>
+                <li className='desktop-nav-item'><a href='#'>Collections</a></li>
+                <li className='desktop-nav-item'><a href='#'>Men</a></li>
+                <li className='desktop-nav-item'><a href='#'>Women</a></li>
+                <li className='desktop-nav-item'><a href='#'>About</a></li>
+                <li className='desktop-nav-item'><a href='#'>Contact</a></li>
                 <li className='push'>
                     <div className='cart-div'>
                         <img className='shopping-cart-icon' src={shoppingCart} onMouseOver={handleCartMouseOver}></img>
