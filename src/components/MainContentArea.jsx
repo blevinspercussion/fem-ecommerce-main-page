@@ -15,10 +15,20 @@ function MainContentArea ({ totalInCart,
                             handleSelected,
                             handleThumbnailSelect,
                             handleRightArrowClick,
-                            handleLeftArrowClick 
+                            handleLeftArrowClick, 
+                            cartIsHovering,
+                            setCartIsHovering,
                         }) {
+
+    const handleHideCart = () => {
+        if (cartIsHovering) {
+            setCartIsHovering(false);
+        }
+    };
+    
+
     return (
-        <div id='main-content'>
+        <div id='main-content' onClick={handleHideCart}>
             <ProductDisplay
                 toggleLightBox={toggleLightBox}
                 currentPic={currentPic}

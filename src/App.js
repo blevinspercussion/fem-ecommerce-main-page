@@ -22,6 +22,7 @@ function App() {
   const [lightBoxActive, setLightBoxActive] = useState(false);
   const [currentPic, setCurrentPic] = useState(productImage1);
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [cartIsHovering, setCartIsHovering] = useState(false);
 
 
   let thumbnails = [];
@@ -178,6 +179,8 @@ const handleRightArrowClick = () => {
         handleThumbnailSelect={handleThumbnailSelect}
         handleRightArrowClick={handleRightArrowClick}
         handleLeftArrowClick={handleLeftArrowClick}
+        cartIsHovering={cartIsHovering}
+        setCartIsHovering={setCartIsHovering}
         />
       }
     })()}
@@ -196,8 +199,10 @@ const handleRightArrowClick = () => {
         toggleDarkOverlay={toggleDarkOverlay}
         toggleLightBox={toggleLightBox}
         toggleHamburgerMenu={toggleHamburgerMenu}
+        cartIsHovering={cartIsHovering}
+        setCartIsHovering={setCartIsHovering}
       />
-      <hr />
+      <hr className='desktop-only' />
       <MainContentArea
         totalInCart={totalInCart}
         setTotalInCart={setTotalInCart}
@@ -212,6 +217,8 @@ const handleRightArrowClick = () => {
         handleSelected={handleSelected}
         handleLeftArrowClick={handleLeftArrowClick}
         handleRightArrowClick={handleRightArrowClick}
+        cartIsHovering={cartIsHovering}
+        setCartIsHovering={setCartIsHovering}
       />
     </div>
   );

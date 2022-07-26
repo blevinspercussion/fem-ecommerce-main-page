@@ -8,16 +8,16 @@ import profilePic from './img/image-avatar.png';
 
 import hamburger from './img/icon-menu.svg'
 
-function Header ({ totalInCart, resetCart, toggleHamburgerMenu }) {
+function Header ({ totalInCart, resetCart, toggleHamburgerMenu, cartIsHovering, setCartIsHovering }) {
 
-    const [isHovering, setIsHovering] = useState(false);
+    // const [isHovering, setIsHovering] = useState(false);
 
     const handleCartMouseOver = () => {
-        setIsHovering(true);
+        setCartIsHovering(true);
     };
 
     const handleCartMouseExit = () => {
-        setIsHovering(false);
+        setCartIsHovering(false);
     };
 
     const handleHamburgerClick = () => {
@@ -44,7 +44,7 @@ function Header ({ totalInCart, resetCart, toggleHamburgerMenu }) {
                     })()}
                 </div>
                 </li>
-                {isHovering && (
+                {cartIsHovering && (
                 <div className='hover-cart-div'>
                     <HoverCart totalInCart={totalInCart} handleCartMouseExit={handleCartMouseExit} resetCart={resetCart} />
                 </div>
