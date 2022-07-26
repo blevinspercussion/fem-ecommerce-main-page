@@ -456,4 +456,18 @@ ul {
         width: 85vw;
         margin-bottom: 25px;
     }
+
+    .hover-cart {
+        width: 85vw;
+        height: 25vh;
+        right: 10px;
+    }
+
+    .trash-icon {
+        margin-left: 90px;
+    }
+
+    .checkout-button {
+        height: 65px;
+    }
 }
