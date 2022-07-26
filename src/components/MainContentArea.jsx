@@ -2,7 +2,21 @@ import './components.css';
 import ProductDetail from './ProductDetail';
 import ProductDisplay from './ProductDisplay';
 
-function MainContentArea ({ totalInCart, setTotalInCart, addToCart, removeFromCart, potentialInCart, addPotentialToCart, toggleLightBox, currentPic, setCurrentPic, thumbnails, handleSelected }) {
+function MainContentArea ({ totalInCart,
+                            setTotalInCart,
+                            addToCart,
+                            removeFromCart,
+                            potentialInCart,
+                            addPotentialToCart,
+                            toggleLightBox,
+                            currentPic,
+                            setCurrentPic,
+                            thumbnails,
+                            handleSelected,
+                            handleThumbnailSelect,
+                            handleRightArrowClick,
+                            handleLeftArrowClick 
+                        }) {
     return (
         <div id='main-content'>
             <ProductDisplay
@@ -11,6 +25,8 @@ function MainContentArea ({ totalInCart, setTotalInCart, addToCart, removeFromCa
                 setCurrentPic={setCurrentPic}
                 thumbnails={thumbnails}
                 handleSelected={handleSelected} 
+                handleLeftArrowClick={handleLeftArrowClick}
+                handleRightArrowClick={handleRightArrowClick}
             />
             <ProductDetail 
                 totalInCart={totalInCart}

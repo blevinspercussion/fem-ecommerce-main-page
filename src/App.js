@@ -101,6 +101,70 @@ function App() {
   
 }
 
+const handleThumbnailSelect = (index) => {
+  console.log(thumbnails[index]);
+  
+  for (let thumbnail in thumbnails) {
+      let newIndex = index+1;
+      thumbnails[thumbnail].classList.remove('selected-image');
+      if (thumbnails[thumbnail].classList.contains(`product-image${newIndex}`)) {
+          thumbnails[thumbnail].classList.add('selected-image');
+      }
+  }
+
+}
+
+const handleLeftArrowClick = () => {
+  switch (currentPic) {
+      case productImage1:
+          setCurrentPic(productImage4);
+          handleThumbnailSelect(3);
+          break;
+
+      case productImage2:
+          setCurrentPic(productImage1);
+          handleThumbnailSelect(0);
+          break;
+
+      case productImage3:
+          setCurrentPic(productImage2);
+          handleThumbnailSelect(1);
+          break;
+
+      case productImage4:
+          setCurrentPic(productImage3);
+          handleThumbnailSelect(2);
+          break;
+  }
+
+
+}
+
+const handleRightArrowClick = () => {
+  handleThumbnailSelect();
+  switch (currentPic) {
+      case productImage1:
+          setCurrentPic(productImage2);
+          handleThumbnailSelect(1);
+          break;
+
+      case productImage2:
+          setCurrentPic(productImage3);
+          handleThumbnailSelect(2);
+          break;
+
+      case productImage3:
+          setCurrentPic(productImage4);
+          handleThumbnailSelect(3);
+          break;
+
+      case productImage4:
+          setCurrentPic(productImage1);
+          handleThumbnailSelect(0);
+          break;
+  }
+}
+
   return (
     <div className="App">
 
@@ -111,6 +175,9 @@ function App() {
         setCurrentPic={setCurrentPic}
         thumbnails={thumbnails}
         handleSelected={handleSelected}
+        handleThumbnailSelect={handleThumbnailSelect}
+        handleRightArrowClick={handleRightArrowClick}
+        handleLeftArrowClick={handleLeftArrowClick}
         />
       }
     })()}
@@ -143,6 +210,8 @@ function App() {
         setCurrentPic={setCurrentPic}
         thumbnails={thumbnails}
         handleSelected={handleSelected}
+        handleLeftArrowClick={handleLeftArrowClick}
+        handleRightArrowClick={handleRightArrowClick}
       />
     </div>
   );

@@ -14,7 +14,7 @@ import rightArrow from './img/icon-next.svg';
 
 
 
-function ProductDisplay ({ toggleLightBox, currentPic, handleCurrentPic, thumbnails, handleSelected }) {
+function ProductDisplay ({ toggleLightBox, currentPic, handleCurrentPic, thumbnails, handleSelected, handleLeftArrowClick, handleRightArrowClick }) {
 
 
     return (
@@ -41,8 +41,8 @@ function ProductDisplay ({ toggleLightBox, currentPic, handleCurrentPic, thumbna
             <div className='product-display-mobile'>
             <div className='product-main-image'>
                     <img className='product-image product-image-large' src={currentPic}></img>
-                    <img className='mobile-left-arrow' src={leftArrow} />
-                    <img className='mobile-right-arrow' src={rightArrow} />
+                    <img className='mobile-left-arrow' src={leftArrow} onClick={handleLeftArrowClick} />
+                    <img className='mobile-right-arrow' src={rightArrow} onClick={handleRightArrowClick} />
                 </div>
                 <div className='product-sub-images'>
                     <div className='product-image-small-bg'>
