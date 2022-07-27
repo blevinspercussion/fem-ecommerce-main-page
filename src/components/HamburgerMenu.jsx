@@ -6,7 +6,7 @@ function HamburgerMenu ({ toggleHamburgerMenu }) {
     return (
         <div id='hamburger-menu'>
             <ul>
-                <li><img id='hamburger-menu-close' src={closeIcon} onClick={toggleHamburgerMenu} /></li>
+                <li><img id='hamburger-menu-close' src={closeIcon} onClick={toggleHamburgerMenu} alt='mobile menu icon' /></li>
                 <li><a>Collections</a></li>
                 <li><a>Men</a></li>
                 <li><a>Women</a></li>

@@ -26,12 +26,12 @@ function HoverCart ({ totalInCart, handleCartMouseExit, resetCart }) {
                 <hr />
                 <div className='hover-cart-body'>
                     <div className='hover-cart-total'>
-                        <img className='cart-thumbnail' src={productImage1}></img>
+                        <img className='cart-thumbnail' src={productImage1} alt='Shopping cart'></img>
                         <div className='cart-description'>
                             <p>Fall Limited Edition Sneakers</p>
                             <p className='cart-total'>$125.00 x {totalInCart} <strong>${125*totalInCart}.00</strong></p>
                         </div>
-                        <img className='trash-icon' src={trashIcon} onClick={handleTrashClick}></img>
+                        <img className='trash-icon' src={trashIcon} onClick={handleTrashClick} alt='Trash can'></img>
                     </div>
                 </div>
                 <div className='checkout-button'>

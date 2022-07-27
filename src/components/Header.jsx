@@ -1,7 +1,5 @@
 import './components.css';
-import { useState } from 'react';
 import HoverCart from './HoverCart';
-import HamburgerMenu from './HamburgerMenu';
 import logo from './img/logo.svg'
 import shoppingCart from './img/icon-cart.svg';
 import profilePic from './img/image-avatar.png';
@@ -27,8 +25,8 @@ function Header ({ totalInCart, resetCart, toggleHamburgerMenu, cartIsHovering, 
     return (
         <div id='header'>
             <ul className='main-nav'>
-                <li id='hamburger-icon'><img src={hamburger} onClick={handleHamburgerClick} /></li>
-                <li id='logo'><img src={logo}></img></li>
+                <li id='hamburger-icon'><img src={hamburger} onClick={handleHamburgerClick} alt='Mobile menu icon'/></li>
+                <li id='logo'><img src={logo} alt='sneakers logo'></img></li>
                 <li className='desktop-nav-item'><a href='#'>Collections</a></li>
                 <li className='desktop-nav-item'><a href='#'>Men</a></li>
                 <li className='desktop-nav-item'><a href='#'>Women</a></li>
@@ -36,7 +34,7 @@ function Header ({ totalInCart, resetCart, toggleHamburgerMenu, cartIsHovering, 
                 <li className='desktop-nav-item'><a href='#'>Contact</a></li>
                 <li className='push'>
                     <div className='cart-div'>
-                        <img className='shopping-cart-icon' src={shoppingCart} onMouseOver={handleCartMouseOver}></img>
+                        <img className='shopping-cart-icon' src={shoppingCart} onMouseOver={handleCartMouseOver} alt='shopping cart icon'></img>
                     {(() => {
                         if (totalInCart > 0) {
                             return <p className='floating-total'>{totalInCart}</p>
@@ -49,7 +47,7 @@ function Header ({ totalInCart, resetCart, toggleHamburgerMenu, cartIsHovering, 
                     <HoverCart totalInCart={totalInCart} handleCartMouseExit={handleCartMouseExit} resetCart={resetCart} />
                 </div>
                 )}
-                <li><img className='profile-pic' src={profilePic}></img></li>
+                <li><img className='profile-pic' src={profilePic} alt='profile avatar'></img></li>
             </ul>
         </div>
     )

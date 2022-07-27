@@ -110,6 +110,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 25px;
 }
 
 .product-image {
@@ -236,8 +237,8 @@ ul {
     position: absolute;
     color: var(--dark-grayish-blue);
     background-color: white;
-    top: 75px;
-    right: 300px;
+    top: 8vh;
+    right: 15vw;
     width: 15vw;
     padding: 10px;
     border-radius: 15px;

@@ -21,15 +21,15 @@ function AddRemoveCart ({ totalInCart, setTotalInCart, addToCart, removeFromCart
         <div className='add-remove-cart'>
             <div className='add-remove-amount'>
                 <div className='plus-minus-div' onClick={handleMinusClick}>
-                    <img className='plus-minus' src={minusSign} ></img>
+                    <img className='plus-minus' src={minusSign} alt='remove item'></img>
                 </div>
                 <p>{potentialInCart}</p>
                 <div className='plus-minus-div' onClick={handlePlusClick}>
-                    <img className='plus-minus' src={plusSign} ></img>
+                    <img className='plus-minus' src={plusSign} alt='add item'></img>
                 </div>
             </div>
             <div className='add-to-cart' onClick={handleAddToCart}>
-                <img className='cart-icon' src={shoppingCart}></img>
+                <img className='cart-icon' src={shoppingCart} alt='shopping cart'></img>
                 <p>Add to cart</p>
             </div>
         </div>

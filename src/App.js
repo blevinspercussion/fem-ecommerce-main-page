@@ -8,10 +8,6 @@ import productImage1 from './components/img/image-product-1.jpg';
 import productImage2 from './components/img/image-product-2.jpg';
 import productImage3 from './components/img/image-product-3.jpg';
 import productImage4 from './components/img/image-product-4.jpg';
-import productImage1Thumbnail from './components/img/image-product-1-thumbnail.jpg';
-import productImage2Thumbnail from './components/img/image-product-2-thumbnail.jpg';
-import productImage3Thumbnail from './components/img/image-product-3-thumbnail.jpg';
-import productImage4Thumbnail from './components/img/image-product-4-thumbnail.jpg';
 
 import { useState, useRef, useEffect } from 'react';
 
@@ -136,6 +132,8 @@ const handleLeftArrowClick = () => {
           setCurrentPic(productImage3);
           handleThumbnailSelect(2);
           break;
+      default:
+        setCurrentPic(productImage1);
   }
 
 
@@ -163,6 +161,8 @@ const handleRightArrowClick = () => {
           setCurrentPic(productImage1);
           handleThumbnailSelect(0);
           break;
+      default:
+        setCurrentPic(productImage1);
   }
 }
 
